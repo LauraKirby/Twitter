@@ -15,6 +15,7 @@ class TweetCell: UITableViewCell {
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var screenNameLabel: UILabel!
+    @IBOutlet weak var createdAtTimeAgoLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,25 +34,22 @@ class TweetCell: UITableViewCell {
         
         var user = tweet.user
         
-
-        //create tweet text label
-        
+        userNameLabel.text = user?.name
+        screenNameLabel.text = "@\((tweet.user?.screenname)!)"
+        createdAtTimeAgoLabel.text = tweet.createdAt?.timeAgo()
         tweetTextLabel.text = tweet.text
         
-        
-        screenNameLabel.text = "@\((tweet.user?.screenname)!)"
-        
-        //create userimage
+
 
         var userImageURL = user?.profileImageUrl
+        
         userImage.setImageWithURL(NSURL (string: userImageURL!))
         userImage.layer.cornerRadius = 8.0
         userImage.clipsToBounds = true
         
         
-        //create username label
         
-        userNameLabel.text = user?.name
+       
         
         
         //create @username label

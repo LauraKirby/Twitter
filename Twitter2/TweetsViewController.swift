@@ -18,8 +18,11 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
         
         tweets = [Tweet]()
+        
         tweetsTableView.delegate = self
         tweetsTableView.dataSource = self
+        tweetsTableView.estimatedRowHeight = 150.0
+        tweetsTableView.rowHeight = UITableViewAutomaticDimension
 
         // Do any additional setup after loading the view.
         
@@ -52,7 +55,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         var tweet = tweets! [indexPath.row]
         println("setting data for row: \(indexPath.row)")
 
-        
+
         cell.setTweet(tweet)
 
         return cell

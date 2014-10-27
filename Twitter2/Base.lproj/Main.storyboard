@@ -58,11 +58,11 @@
                                     <action selector="onLogout:" destination="Ggh-gY-kSX" eventType="touchUpInside" id="vGc-pD-Y3T"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="144" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4NU-V4-7uz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4NU-V4-7uz">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="530"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="144" id="y2E-Rn-rs4" customClass="TweetCell" customModule="Twitter2" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="95" id="y2E-Rn-rs4" customClass="TweetCell" customModule="Twitter2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="328" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y2E-Rn-rs4" id="NKd-vR-Cim">
@@ -76,27 +76,27 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gv4-nD-O4X">
-                                                    <rect key="frame" x="11" y="37" width="50" height="50"/>
+                                                    <rect key="frame" x="10" y="25" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="IYy-MR-DYg"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" misplaced="YES" text="Tweet Text" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" minimumScaleFactor="0.80000000000000027" translatesAutoresizingMaskIntoConstraints="NO" id="UUt-lv-MRa">
-                                                    <rect key="frame" x="66" y="55" width="225" height="65"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tweet Text" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUt-lv-MRa">
+                                                    <rect key="frame" x="66" y="54" width="242" height="28"/>
                                                     <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1 Hr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2V-u2-w7b">
-                                                    <rect key="frame" x="253" y="18" width="38" height="29"/>
+                                                    <rect key="frame" x="273" y="18" width="35" height="27.5"/>
                                                     <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="@kirby_laura" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000027" translatesAutoresizingMaskIntoConstraints="NO" id="z4W-8n-jFO">
-                                                    <rect key="frame" x="136" y="17" width="45" height="29.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="@kirby_laura" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4W-8n-jFO">
+                                                    <rect key="frame" x="136" y="18" width="45" height="27.5"/>
                                                     <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -104,21 +104,24 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="W2V-u2-w7b" firstAttribute="top" secondItem="NKd-vR-Cim" secondAttribute="topMargin" constant="10" id="3ad-kt-W6i"/>
                                                 <constraint firstItem="W2V-u2-w7b" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="z4W-8n-jFO" secondAttribute="trailing" priority="999" constant="8" id="5Kf-3d-1Na"/>
-                                                <constraint firstItem="UUt-lv-MRa" firstAttribute="top" secondItem="W2V-u2-w7b" secondAttribute="bottom" constant="8" id="683-Td-LYA"/>
-                                                <constraint firstItem="EoY-Eb-Eih" firstAttribute="leading" secondItem="NKd-vR-Cim" secondAttribute="leadingMargin" constant="58" id="82e-C6-6wb"/>
-                                                <constraint firstItem="gv4-nD-O4X" firstAttribute="leading" secondItem="NKd-vR-Cim" secondAttribute="leadingMargin" constant="3" id="D1i-vL-dbE"/>
+                                                <constraint firstItem="UUt-lv-MRa" firstAttribute="top" secondItem="W2V-u2-w7b" secondAttribute="bottom" constant="8.5" id="683-Td-LYA"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="UUt-lv-MRa" secondAttribute="bottom" id="Hvo-KM-Pcy"/>
                                                 <constraint firstItem="EoY-Eb-Eih" firstAttribute="top" secondItem="NKd-vR-Cim" secondAttribute="topMargin" constant="10" id="SWg-qG-0uT"/>
-                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="UUt-lv-MRa" secondAttribute="bottom" constant="15.5" id="XEw-XQ-6g8"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="W2V-u2-w7b" secondAttribute="trailing" constant="29" id="eAW-EP-gFW"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="UUt-lv-MRa" secondAttribute="trailing" constant="29" id="hS9-OX-Lnu"/>
-                                                <constraint firstItem="z4W-8n-jFO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EoY-Eb-Eih" secondAttribute="trailing" constant="8" id="jiS-Mi-nUx"/>
-                                                <constraint firstItem="UUt-lv-MRa" firstAttribute="leading" secondItem="gv4-nD-O4X" secondAttribute="trailing" constant="5" id="lfX-3Q-AUY"/>
-                                                <constraint firstItem="UUt-lv-MRa" firstAttribute="top" secondItem="z4W-8n-jFO" secondAttribute="bottom" constant="8.5" id="ljj-ph-huM"/>
-                                                <constraint firstItem="UUt-lv-MRa" firstAttribute="top" secondItem="EoY-Eb-Eih" secondAttribute="bottom" constant="8" id="lpV-7l-6eJ"/>
+                                                <constraint firstItem="EoY-Eb-Eih" firstAttribute="leading" secondItem="gv4-nD-O4X" secondAttribute="trailing" constant="6" id="dWM-E0-Hxh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="W2V-u2-w7b" secondAttribute="trailing" constant="12" id="eAW-EP-gFW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="UUt-lv-MRa" secondAttribute="trailing" constant="12" id="hS9-OX-Lnu"/>
+                                                <constraint firstItem="z4W-8n-jFO" firstAttribute="leading" secondItem="EoY-Eb-Eih" secondAttribute="trailing" constant="8" id="jiS-Mi-nUx"/>
+                                                <constraint firstItem="UUt-lv-MRa" firstAttribute="leading" secondItem="gv4-nD-O4X" secondAttribute="trailing" constant="6" id="lfX-3Q-AUY"/>
+                                                <constraint firstItem="UUt-lv-MRa" firstAttribute="top" secondItem="EoY-Eb-Eih" secondAttribute="bottom" constant="7" id="lpV-7l-6eJ"/>
+                                                <constraint firstItem="gv4-nD-O4X" firstAttribute="leading" secondItem="NKd-vR-Cim" secondAttribute="leadingMargin" constant="2" id="msV-Yp-iL4"/>
+                                                <constraint firstItem="z4W-8n-jFO" firstAttribute="top" secondItem="NKd-vR-Cim" secondAttribute="topMargin" constant="10" id="r3J-Hs-lj8"/>
+                                                <constraint firstItem="UUt-lv-MRa" firstAttribute="top" secondItem="z4W-8n-jFO" secondAttribute="bottom" constant="8.5" id="tdc-68-DYc"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="createdAtTimeAgoLabel" destination="W2V-u2-w7b" id="JcT-K8-4rz"/>
                                             <outlet property="screenNameLabel" destination="z4W-8n-jFO" id="4fm-pD-8EQ"/>
                                             <outlet property="tweetTextLabel" destination="UUt-lv-MRa" id="vfo-ZH-P7e"/>
                                             <outlet property="userImage" destination="gv4-nD-O4X" id="UT3-XN-9k0"/>

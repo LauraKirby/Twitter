@@ -28,10 +28,10 @@ class TwitterClient: BDBOAuth1RequestOperationManager {
             // println("user: \(response)")
             var tweets = Tweet.tweetsWithArray(response as [NSDictionary])
             for tweet in tweets {
-                println("text: \(tweet.text) created:\(tweet.createdAt)")
-            }
+                    println("text: \(tweet.text) created:\(tweet.createdAt)")
+                }
                 completion(tweets: tweets, error: nil)
-            }, failure: { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
+                }, failure: { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
                 println("error getting current user")
                 completion (tweets: nil, error: error) 
         })

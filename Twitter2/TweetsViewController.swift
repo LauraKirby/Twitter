@@ -10,9 +10,13 @@ import UIKit
 
 
 class TweetsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
-    
     var tweets: [Tweet]?
+    var refreshControl:UIRefreshControl!
+   
     @IBOutlet weak var tweetsTableView: UITableView!
+    
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,14 +27,28 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         tweetsTableView.dataSource = self
         tweetsTableView.estimatedRowHeight = 150.0
         tweetsTableView.rowHeight = UITableViewAutomaticDimension
+        
+        self.navigationController?.navigationBar.backgroundColor = UIColor.magentaColor()
+      
+        
 
         // Do any additional setup after loading the view.
         
-        TwitterClient.sharedInstance.homeTimelineWithParams(nil,  completion: { (tweets, error) -> () in
-            self.tweets = tweets
-            self.tweetsTableView.reloadData()
-            
-        })
+//        TwitterClient.sharedInstance.homeTimelineWithParams(nil,  completion: { (tweets, error) -> () in
+//            self.tweets = tweets
+//            self.tweetsTableView.reloadData()
+//            
+//            
+//        })
+        self.loadTimeline()
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.backgroundColor = UIColor.blueColor()
+        refreshControl.tintColor = UIColor.blueColor()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to Refresh")
+        refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        tweetsTableView.addSubview(refreshControl)
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,8 +56,25 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         // Dispose of any resources that can be recreated.
     }
     
-
+    func refresh (sender:AnyObject)
+    {
+        loadTimeline()
+    }
     
+    func loadTimeline()
+    {
+        TwitterClient.sharedInstance.homeTimelineWithParams(nil,  completion: { (tweets, error) -> () in
+            self.tweets = tweets
+            self.tweetsTableView.reloadData()
+            
+            if (self.refreshControl.refreshing)
+            {
+                self.refreshControl.endRefreshing()
+            }
+    
+      })
+        
+    }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) ->Int{
         
         println("number of tweets: \(tweets!.count)")
@@ -61,6 +96,7 @@ class TweetsViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
+    @IBOutlet weak var composeTweetButtonPressed: UIBarButtonItem!
     @IBAction func onLogout(sender: AnyObject) {
         User.currentUser?.logout()
     }

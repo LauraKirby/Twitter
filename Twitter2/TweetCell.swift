@@ -11,7 +11,7 @@ import QuartzCore
 
 class TweetCell: UITableViewCell {
 
-    @IBOutlet weak var tweetTextLabel: UILabel!
+    @IBOutlet weak var tweetTextView: UITextView!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var screenNameLabel: UILabel!
@@ -37,7 +37,7 @@ class TweetCell: UITableViewCell {
         userNameLabel.text = user?.name
         screenNameLabel.text = "@\((tweet.user?.screenname)!)"
         createdAtTimeAgoLabel.text = tweet.createdAt?.timeAgo()
-        tweetTextLabel.text = tweet.text
+        tweetTextView.text = tweet.text
         
 
 

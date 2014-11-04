@@ -22,8 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if User.currentUser != nil {
             //Go to the logged in screed
             println("Current user detected:\(User.currentUser?.name)")
+
+            // make a nav controller
+            // set root of nav controller to tweets vc
+            // set window's root vc to nav controller
             var vc = storyboard.instantiateViewControllerWithIdentifier("TweetsViewController") as UIViewController
-            window?.rootViewController = vc 
+
+            var navVC = UINavigationController(rootViewController:vc as UIViewController)
+            window?.rootViewController = navVC
         }
         // Override point for customization after application launch.
         return true
